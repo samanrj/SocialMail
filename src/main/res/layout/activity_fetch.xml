@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.vanient.mycontacts.MailReceiver.FetchActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/bt_fetch"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="6dp"
+                android:layout_width="wrap_content"
+                android:background="@drawable/mybutton2"
+                android:textColor="#fff"
+                android:layout_height="wrap_content"
+                android:text="Refresh" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_fetch"/>
+
+</android.support.design.widget.CoordinatorLayout>

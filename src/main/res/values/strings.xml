@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MyContacts</string>
+    <string name="group">Group</string>
+    <string name="name">name</string>
+    <string name="contacts">Contacts</string>
+    <string name="create">create</string>
+    <string name="title_activity_group_add">GroupAddActivity</string>
+    <string name="group_name">Group Name：</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="edit">edit</string>
+    <string name="done">DONE</string>
+</resources>

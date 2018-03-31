@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/post_layout_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+
+    tools:context="com.example.vanient.mycontacts.login.PostMessageActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <Button
+        android:id="@+id/bt_send"
+        android:layout_width="90dp"
+        android:layout_height="70dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="28dp"
+        android:textSize="20dp"
+        android:background="@drawable/mybutton2"
+        android:text="POST"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bodyInput" />
+
+    <EditText
+        android:id="@+id/bodyInput"
+        android:layout_width="300dp"
+        android:layout_height="280dp"
+        android:layout_marginBottom="170dp"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/edit_bg"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:singleLine="false"
+        android:textColor="#000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:textColor="#fff"
+        android:text="Friend Email Address(es):"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textSize="1dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:text="What's on your mind:"
+        android:textColor="#06f"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/bodyInput"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toInput"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/toInput"
+        android:layout_width="425dp"
+        android:background="#fff"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:singleLine="true"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <Button
+        android:id="@+id/bt_attach"
+        android:layout_width="83dp"
+        android:layout_height="71dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/mybutton2"
+        android:text="photo/video"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bodyInput" />
+
+    <TextView
+        android:id="@+id/attachFilename"
+        android:layout_width="98dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_attach" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginTop="14dp"
+        android:text="MAKE NEW POST"
+        android:textColor="#06f"
+        android:textSize="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

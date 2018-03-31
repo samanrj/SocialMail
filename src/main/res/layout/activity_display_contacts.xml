@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/wgroup_layout_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+
+    tools:context="com.example.vanient.mycontacts.activity.ContactsDisplayActivity">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:background="#fff">
+        <Button
+            android:id="@+id/jump"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+
+            android:background="#06f"
+            android:text="GROUP"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:layout_centerVertical="true"
+            />
+
+        <Button
+            android:id="@+id/condelete"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="110dp"
+
+            android:background="#06f"
+            android:text="Delete"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:layout_centerVertical="true"
+            />
+
+        <Button
+            android:id="@+id/conblock"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="210dp"
+
+            android:background="#06f"
+            android:text="Block"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:layout_centerVertical="true"
+            />
+
+
+        <ImageView
+            android:id="@+id/addcontact"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="1dp"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            android:paddingTop="1dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/plus"
+            android:clickable="true"/>
+
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/edit_done"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#06F"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:textColor="#FFF"
+            android:visibility="gone"
+            android:text="@string/done" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvContacts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

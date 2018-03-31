@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/group_layout_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:background="@drawable/backg"
+
+    tools:context="com.example.vanient.mycontacts.login.LoginActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/welcomeTxt"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/gButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="Welcome!"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/postButton"
+        android:layout_width="140dp"
+        android:layout_height="58dp"
+        android:layout_alignParentBottom="true"
+
+        android:layout_alignParentEnd="true"
+        android:background="#Afffff"
+
+        android:text="My Groups"
+        android:textColor="#000080"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.961" />
+
+    <Button
+        android:id="@+id/soButton"
+        android:layout_width="140dp"
+        android:layout_height="58dp"
+        android:background="#Afffff"
+        android:layout_alignBottom="@+id/hbutton"
+        android:layout_alignParentStart="true"
+        android:onClick="performSignOut"
+        android:text="SIGN OUT"
+        android:textColor="#000080"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.689"
+        app:layout_constraintStart_toEndOf="@+id/postButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <TextView
+        android:id="@+id/loginStat"
+        android:layout_width="181dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/welcomeTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dp"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userDisplayName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="300dp"
+        android:textColor="#fff"
+        android:layout_centerHorizontal="true"
+         />
+
+    <ImageView
+        android:id="@+id/userProfPic"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginBottom="0dp"
+        android:layout_above="@+id/welcomeTxt"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <Button
+        android:id="@+id/gButton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/oButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/mybutton"
+        android:text="GMail"
+        android:onClick="performAuthorizationGmail"
+        android:textColor="#000080" />
+
+
+    <Button
+        android:id="@+id/oButton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/postButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/mybutton"
+        android:onClick="performAuthorizationOutlook"
+        android:text="LIVE.COM"
+        android:padding="10dp"
+        android:textColor="#000080"
+        android:textSize="15dp"
+        app:layout_constraintVertical_bias="0.833" />
+    <Button
+        android:id="@+id/hbutton"
+        android:layout_width="140dp"
+        android:layout_height="58dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/userProfPic"
+        android:background="#Afffff"
+        android:text="HOME"
+        android:textColor="#000080"
+        android:textSize="14dp" />
+
+</RelativeLayout>

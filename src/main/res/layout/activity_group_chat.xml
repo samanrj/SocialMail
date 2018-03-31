@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    tools:context="com.example.vanient.mycontacts.activity.ContactsDisplayActivity">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:background="#fff">
+
+        <TextView
+            android:id="@+id/groupname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="CONTACTS"
+            android:textColor="#06f"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            />
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/membername"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/name"
+
+        android:textColor="#06f" />
+
+    <Button
+        android:id="@+id/postButton"
+        android:layout_width="119dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/mybutton2"
+        android:text="Post"
+        android:textColor="#FFF" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/group_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:width="120dp"
+            android:background="@drawable/mybutton2"
+            android:text="edit group"
+            android:textColor="#FFF" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

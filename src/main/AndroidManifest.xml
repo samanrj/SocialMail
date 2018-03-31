@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.vanient.contacts">
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+
+    //LOGIN
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="MyContacts"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="com.example.vanient.mycontacts.login.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            !-- AppAuth redirectUri -->
+            <intent-filter>
+                <action android:name="com.sns.socialmail.HANDLE_AUTHORIZATION_RESPONSE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- AppAuth redirectUri activity -->
+        <activity android:name="net.openid.appauth.RedirectUriReceiverActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="com.sns.socialmail" />
+            </intent-filter>
+        </activity>
+
+        <!-- POST Message Activity-->
+        <activity android:name="com.example.vanient.mycontacts.login.PostMessageActivity"
+            android:parentActivityName="com.example.vanient.mycontacts.activity.GroupDisplayActivity">
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+        <!--  <meta-data
+                 android:name="android.support.PARENT_ACTIVITY"
+                 android:value="com.example.vanient.mycontacts.activity.GroupChatActivity" />-->
+        </activity>
+
+
+        <activity android:name="com.example.vanient.mycontacts.activity.ContactAddActivity" />
+        <activity android:name="com.example.vanient.mycontacts.activity.GroupDisplayActivity">
+         <meta-data
+     android:name="android.support.PARENT_ACTIVITY"
+     android:value="com.example.vanient.mycontacts.login.LoginActivity" />
+        </activity>
+
+        <activity android:name="com.example.vanient.mycontacts.activity.ContactsDisplayActivity" />
+
+        <activity android:name="com.example.vanient.mycontacts.activity.GroupChatActivity" >
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.vanient.mycontacts.activity.GroupDisplayActivity" />
+        </activity>
+
+        <activity
+            android:name="com.example.vanient.mycontacts.activity.GroupAddActivity"
+            android:label="@string/title_activity_group_add"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+
+        <activity
+            android:name="com.example.vanient.mycontacts.MailReceiver.FetchActivity"
+            android:parentActivityName="com.example.vanient.mycontacts.login.LoginActivity">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.vanient.mycontacts.login.LoginActivity" />
+        </activity>
+        <activity android:name="com.example.vanient.mycontacts.MailReceiver.PostCommentActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.vanient.mycontacts.MailReceiver.FetchActivity" />
+        </activity>
+        <activity android:name="com.example.vanient.mycontacts.MailReceiver.PostLikeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.vanient.mycontacts.MailReceiver.FetchActivity" />
+        </activity>
+
+
+    </application>
+
+</manifest>

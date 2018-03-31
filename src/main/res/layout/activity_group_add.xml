@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical"
+    android:background="@drawable/ccc"
+    android:stretchColumns="0,3">
+
+    <TableRow>
+
+        <TextView />
+        <TextView
+            android:text="@string/group_name"
+            android:layout_width="wrap_content"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:layout_height="wrap_content"
+            />
+
+        <EditText
+            android:id="@+id/group_name"
+            android:layout_width="wrap_content"
+            android:background="@drawable/edit_bg"
+            android:layout_height="wrap_content"
+
+            android:textSize="70px"
+            android:minWidth="500px"/>
+
+        <TextView />
+
+    </TableRow>
+
+    <TableRow android:layout_marginTop="20px">
+
+        <TextView />
+
+        <Button
+
+            android:id="@+id/group_confirm"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#fff"
+            android:background="@drawable/mybutton2"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="create" />
+
+        <Button
+
+            android:id="@+id/gourp_cancel"
+            android:layout_width="80dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="90dp"
+            android:textColor="#fff"
+            android:layout_marginRight="10dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mybutton2"
+            android:text="@string/cancel"
+            android:layout_marginBottom="170dp"/>
+
+        <TextView />
+    </TableRow>
+
+<!--
+    <Button
+
+        android:id="@+id/add_group_contact"
+        android:text="add_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <Button
+
+        android:id="@+id/total_confirm"
+        android:text="confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />-->
+</TableLayout>
